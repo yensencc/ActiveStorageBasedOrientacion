@@ -1,8 +1,8 @@
-
+<%= rails_social_share_button_tag('Share to Facebook', url: root_path, desc: "Orientacion Familiar Una Guia Para El Hogar") %>
 <% if user_signed_in? %>
-  <% if current_user.avatar.attached? %>
-    <%= image_tag(current_user.avatar) %>
-   <% end %>
+
+   <%= show_avatar(current_user)%>
+
 
   Logged in as <strong><%= current_user.email %></strong>.
   <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
@@ -12,7 +12,7 @@
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 <% end %>
 
-<div style = "margin-top = "50px">
+<div style = "margin-top = 50px">
 <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000">
 <ol class="carousel-indicators">
 <li data-target="#carousel" data-slide-to="0" class=""></li>
@@ -79,7 +79,7 @@
 
 
     <div class="col-md-6 " style = "margin-top:1% ;" >
-        <iframe width="750" height="500" src="https://www.youtube.com/embed/SME4sfFqN3g?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="500" src="https://www.youtube.com/embed/SME4sfFqN3g?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
     <div class = "col-md-3" style = "margin-top:1% ;" >
@@ -109,7 +109,7 @@
         <div class="indent_1000">
             <ul class="services_2">
                 <div class="row">
-                    <li class="test col-sm-4">
+                    <li class="test col-sm">
                         <figure class="testimonial-thumb">
                             <%= link_to image_tag "f_mes.jpg" , class: "img"%>
                         </figure>
@@ -119,7 +119,7 @@
                             </h3>
                         </aside>
                     </li>
-                    <li class="test col-xs-12 col-sm-4">
+                    <li class="test col-sm">
                         <figure class=" testimonial-thumb">
                             <%= link_to image_tag "mejores_padres.jpg" , class: "img"%>
                             
@@ -129,12 +129,48 @@
 
                         </aside>
                     </li>
-                    <li class="test col-xs-12 col-sm-4">
+                    <li class="test col-sm">
                         <figure class="testimonial-thumb">
                            <%= link_to image_tag "intimidad.jpg" , class: "img"%>
                         </figure>
                         <aside class="testimonial-text">
                             <h3 class="testimonial-title text-center">En Intimidad Con La Pareja</h3>
+
+                        </aside>
+                    </li>
+                    <li class="test col-sm">
+                        <figure class="testimonial-thumb">
+                           <%= link_to image_tag "intimidad.jpg" , class: "img"%>
+                        </figure>
+                        <aside class="testimonial-text">
+                            <h3 class="testimonial-title text-center">Como diciplinar a nuestros hijos</h3>
+
+                        </aside>
+                    </li>
+                        <li class="test  col-sm">
+                        <figure class="testimonial-thumb">
+                           <%= link_to image_tag "intimidad.jpg" , class: "img"%>
+                        </figure>
+                        <aside class="testimonial-text">
+                            <h3 class="testimonial-title text-center">Reflexion para la vida familiar</h3>
+
+                        </aside>
+                    </li>
+                        <li class="test col-sm">
+                        <figure class="testimonial-thumb">
+                           <%= link_to image_tag "intimidad.jpg" , class: "img"%>
+                        </figure>
+                        <aside class="testimonial-text">
+                            <h3 class="testimonial-title text-center">La familia y la salud</h3>
+
+                        </aside>
+                    </li>
+                    <li class="test  col-sm">
+                        <figure class="testimonial-thumb">
+                           <%= link_to image_tag "intimidad.jpg" , class: "img"%>
+                        </figure>
+                        <aside class="testimonial-text">
+                            <h3 class="testimonial-title text-center">La sicologia y la salud</h3>
 
                         </aside>
                     </li>
@@ -157,9 +193,8 @@
                         <div class="frontside">
                             <div class="card">
                                 <div class="card-body text-center">
-                                    <p><div alt="card image"> <%= link_to image_tag "yaniris_photo.jpg" , class:" team_photo"  %></div></p>
-                                    <h4 class="card-title">Sunlimetech</h4>
-                                    <p class="card-text">This is basic card with image on top, title, description and button.</p>
+                                    <p><div alt="card image"> <%= link_to image_tag "joseGil.jpg" , class:" team_photo"  %></div></p>
+                                    <h4 class="card-title">Dr Jose Gil</h4>
                                     <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
                                 </div>
                             </div>
@@ -167,8 +202,12 @@
                         <div class="backside">
                             <div class="card">
                                 <div class="card-body text-center mt-4">
-                                    <h4 class="card-title">Sunlimetech</h4>
-                                    <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
+
+                                    <p class="card-text">Jose Gil Abreu nacido en la República Dominicana. Curso sus
+estudios básicos en el país caribeño. Recibió su formación universitara
+ en su patria que lo vio nacer la Rep. Dominicana como tambien en los Estados Unidos. Ha
+recidido en los EU los últimos quince anos de su vida. Es Psicólogo,
+terapeuta individual, de pareja, familiar, de grupo, educador, profesor universitario, comunicador, conferencista, musico, productor radial y televisivo..</p>
                                     <ul class="list-inline">
                                         <li class="list-inline-item">
                                             <a class="social-icon text-xs-center" target="_blank" href="#">
@@ -205,7 +244,7 @@
                         <div class="frontside">
                             <div class="card">
                                 <div class="card-body text-center">
-                                    <p><div alt="card image"> <%= link_to image_tag "joseGil.jpg" , class:" team_photo"  %></div></p>
+                                    <p><div alt="card image"> <%= link_to image_tag "yaniris_photo.jpg" , class:" team_photo"  %></div></p>
                                     <h4 class="card-title">Sunlimetech</h4>
                                     <p class="card-text">This is basic card with image on top, title, description and button.</p>
                                     <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
