@@ -1,0 +1,173 @@
+
+<%= rails_social_share_button_tag('Share to Facebook', url: post_path(@post), desc: @post.main_title) %>
+<img src="<%= @post.main_image_post_url %>" class="img-fluid" alt="Responsive image">
+<div class= 'h1'>
+  <%= @post.main_title %>
+</div></br>
+ <p><%= @post.created_at.strftime("%B %d, %Y") %></p> 
+
+
+
+</br>
+
+<p>
+  <%= @post.main_content %>
+</p>
+
+<div class = "img-thumbnail" alt="">
+  <%= @post.sub1_image_url %>
+</div >
+  
+</p>
+
+<p>
+
+  <%= @post.subtitle_1 %>
+</p>
+
+<p>
+
+  <%= @post.content_1 %>
+</p>
+
+<div class = "img-thumbnail" alt="">
+  <%= @post.sub2_image_url %>
+</div >
+
+<p>
+
+  <%= @post.subtitle_2 %>
+</p>
+
+<p>
+
+  <%= @post.content_2 %>
+</p>
+
+<div class = "img-thumbnail" alt="">
+  <%= @post.sub3_image_url %>
+</div >
+
+<p>
+
+  <%= @post.subtitle_3 %>
+</p>
+
+<p>
+
+  <%= @post.content_3 %>
+</p>
+
+<div class = "img-thumbnail" alt="">
+  <%= @post.sub4_image_url %>
+</div >
+
+<p>
+
+  <%= @post.subtitle_4 %>
+</p>
+
+<p>
+
+  <%= @post.content_4 %>
+</p>
+
+<div class = "img-thumbnail" alt="">
+  <%= @post.sub5_image_url %>
+</div >
+
+<p>
+
+  <%= @post.subtitle_5 %>
+</p>
+
+<p>
+
+  <%= @post.content_5 %>
+</p>
+
+<div class = "img-thumbnail" alt="">
+  <%= @post.sub6_image_url %>
+</div >
+
+<p>
+ 
+  <%= @post.subtitle_6 %>
+</p>
+
+<p>
+
+  <%= @post.content_6 %>
+</p>
+
+<div class = "img-thumbnail" alt="">
+  <%= @post.sub7_image_url %>
+</div >
+<p>
+
+  <%= @post.subtitle_7 %>
+</p>
+
+<p>
+
+  <%= @post.content_7 %>
+</p>
+
+<div class = "img-thumbnail" alt="">
+  <%= @post.sub8_image_url %>
+</div >
+
+<p>
+ 
+  <%= @post.subtitle_8 %>
+</p>
+
+<p>
+ 
+  <%= @post.content_8 %>
+</p>
+
+<div class = "img-thumbnail" alt="">
+  <%= @post.sub9_image_url %>
+</div >
+<p>
+ 
+  <%= @post.subtitle_9 %>
+</p>
+
+<p>
+ 
+  <%= @post.content_9 %>
+</p>
+
+<div class = "img-thumbnail" alt="">
+  <%= @post.sub10_image_url %>
+</div >
+
+<p>
+ 
+  <%= @post.subtitle_10 %>
+</p>
+
+<p>
+
+  <%= @post.content_10 %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @post.author %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @post.category %>
+</p>
+
+<h4> <%= @post.comments.count %> Comments </h4>
+<%= render @post.comments %>
+<h5> Add a Comment</h5>
+<%= render "comments/form" %>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>

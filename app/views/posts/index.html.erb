@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1> Articulos y  Recursos</h1>
+
+
+<br>
+
+<%= link_to 'New Post', new_post_path %>
+ <%= link_to 'Home Page', root_path %>
+
+
+<% @posts.each do |post| %>
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="<%= post.main_image_post_url %>" alt="Card image cap">
+    <div class="card-body">
+    <h5 class="card-title"><%= post.main_title %></h5>
+    <p class="card-text"><%= post.main_content.truncate(150) %></p>
+            <div class="author">
+             <%= 'By: ' + post.author %>
+            </div>
+</div>
+                <%= link_to 'Show', post %>
+                <% if current_user == post.user %>
+                <%= link_to 'Edit', edit_post_path(post) %>
+                <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+                <% end %>
+ <% end %>
