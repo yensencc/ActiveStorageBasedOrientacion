@@ -1,11 +1,4 @@
-
-<div class = "sticky-container">
-    <div class="sticky">
-    <%= rails_social_share_button_tag('Share to Facebook', url: root_path, desc: "Orientacion Familiar Una Guia Para El Hogar") %>
-    </div>
-</div>
 <% if user_signed_in? %>
-
 
   Logged in as <strong><%= current_user.email %></strong>.
   <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |

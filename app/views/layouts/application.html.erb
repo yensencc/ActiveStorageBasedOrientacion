@@ -8,8 +8,6 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <!-- Social Share Kit CSS -->
-<link rel="stylesheet" href="your-path/social-share-kit.css" type="text/css">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     
 
@@ -68,11 +66,11 @@
 </nav>
 
 </div>
-<div class = "sticky-container">
-    <div class="sticky">
+
+    <div class=  "social-share-button">
     <%= rails_social_share_button_tag('Share to Facebook', url: root_path, desc: "Orientacion Familiar Una Guia Para El Hogar") %>
     </div>
-</div>
+
 
   </head>
 
