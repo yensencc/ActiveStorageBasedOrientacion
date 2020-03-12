@@ -1,16 +1,17 @@
 <%= rails_social_share_button_tag('Share to Facebook', url: root_path, desc: "Orientacion Familiar Una Guia Para El Hogar") %>
 <% if user_signed_in? %>
 
-   <%= show_avatar(current_user)%>
-
 
   Logged in as <strong><%= current_user.email %></strong>.
   <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
   <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+    <%= show_avatar(current_user)%>
 <% else %>
   <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+
 <% end %>
+
 
 <div style = "margin-top = 50px">
 <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000">
@@ -338,7 +339,6 @@ terapeuta individual, de pareja, familiar, de grupo, educador, profesor universi
 </section>
 
 <!-- Team -->
-
 
 
 
