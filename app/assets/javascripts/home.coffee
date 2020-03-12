@@ -3,3 +3,4 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 
+youtube_frame.children[1].childNodes[2].childNodes[3].style.zIndex = 0;

@@ -1,3 +1,4 @@
+
 <%= rails_social_share_button_tag('Share to Facebook', url: root_path, desc: "Orientacion Familiar Una Guia Para El Hogar") %>
 <% if user_signed_in? %>
 
@@ -94,12 +95,10 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
-<div class = "container" style = "margin-top: 10%" >
-<script src="https://apps.elfsight.com/p/platform.js"data-turbolinks-permanent>
-
-</script>
- <div class="elfsight-app-387ab003-542a-4beb-aaa0-0d17937f228c">
-    </div>
+<div class = "container" style = "margin-top: 10%"  id= "youtube_frame" >
+<div  class="elfsight-app-387ab003-542a-4beb-aaa0-0d17937f228c">
+</div>
+ 
 
 
 
@@ -337,8 +336,11 @@ terapeuta individual, de pareja, familiar, de grupo, educador, profesor universi
         </div>
     </div>
 </section>
+<script src="https://apps.elfsight.com/p/platform.js" data-turbolinks-permanent style= "z-index: unset;">
 
-<!-- Team -->
+</script>
+
+
 
 
 
