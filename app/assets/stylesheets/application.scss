@@ -19,7 +19,7 @@
 
 .icon{
     width:350px;
-    margin-right: 65%;
+    margin-right: 45%;
     
 }
 
@@ -49,8 +49,10 @@ max-height: 440px;
 h1,
 .navbar-brand,
 .navbar-nav a {
-  font-family: 'Nunito Sans';
-  font-size: auto ;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 19px ;
+  bold: 10px;
+
 }
 
 
@@ -74,20 +76,18 @@ ytp-chrome-top, ytp-show-cards-title{
 }
 
 .testimonial-thumb img {
-    max-width: 680px;
+    max-width: auto;
 }
 
 .testimonial-thumb img {
     border-radius: 410px;
-    border: 5px solid #fff;
+    border: 5px 
 }
 
 .testimonial-title {
-    font-weight: bold;
-    font-size: 24px;
-    font-size: 2.4rem;
+    font-size: 18px;
     /*   margin: 1rem 0; */
-    text-transform: uppercase;
+    text-transform: normal;
 }
 
 @media screen and (max-width: 1099px) {
@@ -104,14 +104,7 @@ ytp-chrome-top, ytp-show-cards-title{
 }
 
 
-.navbar .container .navbar-brand {
-    color: #373535;
-    font-size: 40px;
-    margin: 8px 0;
-}
-
-
-$size: 30px;
+$size: 50px;
 
 .social-share-button {
   .ssb-icon {

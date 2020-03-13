@@ -1,15 +1,3 @@
-<% if user_signed_in? %>
-
-  Logged in as <strong><%= current_user.email %></strong>.
-  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-    <%= show_avatar(current_user)%>
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-
-<% end %>
-
 
 <div style = "margin-top = 50px">
 <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000">
@@ -102,11 +90,10 @@
 <!-- Secciones -->
 
 <body>
-    <section id="services_2">
-        <div class="indent_1000">
-            <ul class="services_2">
+       
+            <ul >
                 <div class="row">
-                    <li class="test col-sm">
+                    <li class="test col-sm-3">
                         <figure class="testimonial-thumb">
                             <%= link_to image_tag "f_mes.jpg" , class: "img"%>
                         </figure>
@@ -116,7 +103,7 @@
                             </h3>
                         </aside>
                     </li>
-                    <li class="test col-sm">
+                    <li class="test col-sm-3">
                         <figure class=" testimonial-thumb">
                             <%= link_to image_tag "mejores_padres.jpg" , class: "img"%>
                             
@@ -126,7 +113,7 @@
 
                         </aside>
                     </li>
-                    <li class="test col-sm">
+                    <li class="test col-sm-3">
                         <figure class="testimonial-thumb">
                            <%= link_to image_tag "intimidad.jpg" , class: "img"%>
                         </figure>
@@ -135,36 +122,36 @@
 
                         </aside>
                     </li>
-                    <li class="test col-sm">
+                    <li class="test col-sm-3">
                         <figure class="testimonial-thumb">
-                           <%= link_to image_tag "intimidad.jpg" , class: "img"%>
+                           <%= link_to image_tag "diciplina.jpg" , class: "img"%>
                         </figure>
                         <aside class="testimonial-text">
                             <h3 class="testimonial-title text-center">Como diciplinar a nuestros hijos</h3>
 
                         </aside>
                     </li>
-                        <li class="test  col-sm">
+                        <li class="test  col-sm-3">
                         <figure class="testimonial-thumb">
-                           <%= link_to image_tag "intimidad.jpg" , class: "img"%>
+                           <%= link_to image_tag "reflexion.jpg" , class: "img"%>
                         </figure>
                         <aside class="testimonial-text">
                             <h3 class="testimonial-title text-center">Reflexion para la vida familiar</h3>
 
                         </aside>
                     </li>
-                        <li class="test col-sm">
+                        <li class="test col-sm-3">
                         <figure class="testimonial-thumb">
-                           <%= link_to image_tag "intimidad.jpg" , class: "img"%>
+                           <%= link_to image_tag "familia_y_salud.jpg" , class: "img"%>
                         </figure>
                         <aside class="testimonial-text">
                             <h3 class="testimonial-title text-center">La familia y la salud</h3>
 
                         </aside>
                     </li>
-                    <li class="test  col-sm">
+                    <li class="test  col-sm-3">
                         <figure class="testimonial-thumb">
-                           <%= link_to image_tag "intimidad.jpg" , class: "img"%>
+                           <%= link_to image_tag "saludSicologica.jpg" , class: "img"%>
                         </figure>
                         <aside class="testimonial-text">
                             <h3 class="testimonial-title text-center">La sicologia y la salud</h3>
@@ -173,8 +160,8 @@
                     </li>
                 </div>
             </ul>
-        </div>
-    </section> 
+      
+
 </body> 
 
 

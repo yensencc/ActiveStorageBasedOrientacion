@@ -6,7 +6,7 @@
     
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     
@@ -27,7 +27,7 @@
   </button>
 
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent" style = "margin-left: 8%";>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" style = "margin-left: 4%";>
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <div class="nav-link" href="#"><%= link_to 'Inicio', root_path %><span class="sr-only">(current)</span></div>
@@ -40,7 +40,7 @@
         <div class="nav-link" href="#"><%= link_to 'Contacto', home_contacto_path %></div>
       </li>
       <li>
-       <div class="nav-link" href="#"> <%= link_to 'Articulos de Recursos', posts_path %></div>
+       <div class="nav-link" href="#"> <%= link_to 'Articulos de Interes', posts_path %></div>
       </li>
       <li>
        <div class="nav-link" href="#"> <%= link_to 'Cursos', 'https://www.udemy.com/courses/search/?src=ukw&q=padres' %></div>
@@ -58,9 +58,24 @@
         <div class="nav-link " href="#"><%= link_to 'TV y Radio', home_radio_path %></div>
       </li>
       
-     
+      <li class="nav-item ">
+         <% if user_signed_in? %>
+         <div class="nav-link " href="#"><%= link_to 'Edit profile', edit_user_registration_path %></div>
+        <li class="nav-item "> <div class="nav-link " href="#"><%= link_to "Logout", destroy_user_session_path, method: :delete %></div></li>
+        <% if current_user.avatar.attached? %>
+        <li class="nav-item "> <%= show_avatar(current_user)  %></li>
+        <% else %>
+          <li class="nav-item "> <%= image_tag('https://clipartart.com/images/login-background-images-clipart-1.jpg' , :style => 'border-right: 1px solid #000  ; width:60px; height:50px;  border-radius: 30px 30px;' ) %></li>
+        <% end %>
+        <liclass="nav-item "> Logged in as <strong><%= current_user.email %></strong>.</li>
+         <% else %>
+        <div class="nav-link " href="#"><%= link_to "Sign up", new_user_registration_path %> 
+      </li>
+      <li class="nav-item">
+         <div class="nav-link " href="#"><%= link_to "Login", new_user_session_path  %></div>
+        <% end %>
+      </li> 
     </ul>
- 
   </div>
 
 </nav>

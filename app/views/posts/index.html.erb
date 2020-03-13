@@ -1,27 +1,44 @@
 <p id="notice"><%= notice %></p>
 
-<h1> Articulos y  Recursos</h1>
-
-
+<h1> Articulos de Orientacion Familiar</h1>
 <br>
 
-<%= link_to 'New Post', new_post_path %>
- <%= link_to 'Home Page', root_path %>
-
-
+<div class= "row">
 <% @posts.each do |post| %>
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="<%= post.main_image_post_url %>" alt="Card image cap">
-    <div class="card-body">
-    <h5 class="card-title"><%= post.main_title %></h5>
-    <p class="card-text"><%= post.main_content.truncate(150) %></p>
-            <div class="author">
-             <%= 'By: ' + post.author %>
-            </div>
+    <div class = "col sm-6">
+    <div class="card " style="width: 18rem; flex:left">
+        <%= link_to post do %>
+           <%= image_tag  post.main_image_post_url,  class: "card-img-top" %>
+        <% end %>
+        <div class="card-body">
+        <h5 class="card-title"><%= post.main_title %></h5>
+        <p class="card-text"><%= post.main_content.truncate(150) %></p>
+                <div class="author">
+                 <%= 'By: ' + post.author %>
+                </div>
+        </div>        
+    </div>
+                    <%= link_to 'Leer', post %>
+                    <% if current_user == post.user %>
+                    <%= link_to 'Editar', edit_post_path(post) %>
+                    <%= link_to 'Eliminar', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+                    <% end %>
+       </div>            
+    <% end %>
+    </div>
+    <div class = "col sm-12">
+        <%= link_to 'Postear nuevo Art  ', new_post_path %> | | <%= link_to 'Volver a inicio', root_path %> 
+    </div>
+
+
+
 </div>
-                <%= link_to 'Show', post %>
-                <% if current_user == post.user %>
-                <%= link_to 'Edit', edit_post_path(post) %>
-                <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
-                <% end %>
- <% end %>
+
+
+    <div style= "justify-content: center">
+  
+   </div>
+
+
+
+
