@@ -44,15 +44,16 @@
 
 
  
-<div class="row">
+<div class="container">
     
-    <div class="col-md-12 sm-auto" >
-        <div class= "col-sm">
-           <h1>En vivo COVID-19 en Pensylvania por Condado</h1> 
-        </div>
-        <iframe src="https://www.google.com/maps/d/embed?mid=1lpLPPrltIuVkwFtXhoWdWEA4B1DvNmne" width="100%" height="600px">
-        </iframe>
+<div class="col-sm-9 sm-auto" style ="margin-top: 10%" >
+    <div class= "col-sm">
+       <h3>COVID-19 Casos Confirmados en el estado de Pensylvannia</h3> 
+       <h5>Mapa por condado</h5>
     </div>
+    <iframe src="https://www.google.com/maps/d/embed?mid=1lpLPPrltIuVkwFtXhoWdWEA4B1DvNmne" width="100%" height="600px">
+    </iframe>
+</div>
 
 </div>
 
@@ -60,21 +61,33 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
+</br>
 
-<div class = "container" style = "margin-top: 10%"  id= "youtube_frame" >
-<div  class="elfsight-app-387ab003-542a-4beb-aaa0-0d17937f228c">
+
+<div class = "container"   style ="margin-top: 10%" align="center" >
+      <h2> Ya somos TV y Radio !</h2>
+    <div class="row">
+      
+        <h3> Escuchanos en los horarios 8-9:00 am y 8-9:00 pm en la honda radial Esperanza de vida 99.1 FM</h3>
+        <div class="test col-sm-10" >
+         <%= link_to(image_tag("radio_image.jpg" , style:"width:120%;"), home_radio_path)  %>
+         </div>
+        </div>
+    </div>
+    <h2 style = "margin-top: 5%"> Orientacion Familiar TV !</h2>
+    <div class="row"  >
+        <div class="test col-sm-12" >
+         <%= link_to(image_tag("tv.jpg" , style:"width:70%;"), home_radio_path)  %>
+         </div>
+        </div>
+    </div>
 </div>
  
-
-
-
 <!-- Secciones -->
-
-<body>
-       
+<body >
             <ul >
-                <div class="row">
-                    <li class="test col-sm-3">
+                <div class="row" style = "margin-top: 10%;" >
+                    <div class="test col-sm-3">
                         <figure class="testimonial-thumb">
                             <%= link_to image_tag "f_mes.jpg" , class: "img"%>
                         </figure>
@@ -83,8 +96,8 @@
                                 La Familia Del Mes
                             </h3>
                         </aside>
-                    </li>
-                    <li class="test col-sm-3">
+                    </div>
+                    <div class="test col-sm-3">
                         <figure class=" testimonial-thumb">
                             <%= link_to image_tag "mejores_padres.jpg" , class: "img"%>
                             
@@ -93,8 +106,8 @@
                             <h3 class="testimonial-title text-center">Escuela Para Mejores Padres</h3>
 
                         </aside>
-                    </li>
-                    <li class="test col-sm-3">
+                    </div>
+                    <div class="test col-sm-3">
                         <figure class="testimonial-thumb">
                            <%= link_to image_tag "intimidad.jpg" , class: "img"%>
                         </figure>
@@ -102,8 +115,8 @@
                             <h3 class="testimonial-title text-center">En Intimidad Con La Pareja</h3>
 
                         </aside>
-                    </li>
-                    <li class="test col-sm-3">
+                    </div>
+                    <div class="test col-sm-3">
                         <figure class="testimonial-thumb">
                            <%= link_to image_tag "diciplina.jpg" , class: "img"%>
                         </figure>
@@ -111,8 +124,8 @@
                             <h3 class="testimonial-title text-center">Como diciplinar a nuestros hijos</h3>
 
                         </aside>
-                    </li>
-                        <li class="test  col-sm-3">
+                    </div>
+                    <div class="test  col-sm-3">
                         <figure class="testimonial-thumb">
                            <%= link_to image_tag "reflexion.jpg" , class: "img"%>
                         </figure>
@@ -120,8 +133,8 @@
                             <h3 class="testimonial-title text-center">Reflexion para la vida familiar</h3>
 
                         </aside>
-                    </li>
-                        <li class="test col-sm-3">
+                    </div>
+                    <div class="test col-sm-3">
                         <figure class="testimonial-thumb">
                            <%= link_to image_tag "familia_y_salud.jpg" , class: "img"%>
                         </figure>
@@ -129,8 +142,8 @@
                             <h3 class="testimonial-title text-center">La familia y la salud</h3>
 
                         </aside>
-                    </li>
-                    <li class="test  col-sm-3">
+                    </div>
+                    <div class="test  col-sm-3">
                         <figure class="testimonial-thumb">
                            <%= link_to image_tag "saludSicologica.jpg" , class: "img"%>
                         </figure>
@@ -138,7 +151,7 @@
                             <h3 class="testimonial-title text-center">La sicologia y la salud</h3>
 
                         </aside>
-                    </li>
+                    </div>
                 </div>
             </ul>
       
@@ -146,166 +159,10 @@
 </body> 
 
 
-<!-- Team -->
-<section id="team" class="pb-12" style = "margin-top: 8%">
-    <div class="container">
-        <h5 class="section-title h1">Equipo De Orientacion Familiar</h5>
-        <div class="row">
-            <!-- Team member -->
-            <div class="col-xs-12 col-sm-4 col-md-4">
-                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                    <div class="mainflip">
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><div alt="card image"> <%= link_to image_tag "joseGil.jpg" , class:" team_photo"  %></div></p>
-                                    <h4 class="card-title">Dr Jose Gil</h4>
-                                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backside">
-                            <div class="card">
-                                <div class="card-body text-center mt-4">
-
-                                    <p class="card-text">Jose Gil Abreu nacido en la República Dominicana. Curso sus
-estudios básicos en el país caribeño. Recibió su formación universitara
- en su patria que lo vio nacer la Rep. Dominicana como tambien en los Estados Unidos. Ha
-recidido en los EU los últimos quince anos de su vida. Es Psicólogo,
-terapeuta individual, de pareja, familiar, de grupo, educador, profesor universitario, comunicador, conferencista, musico, productor radial y televisivo..</p>
-                                    <ul class="list-inline">
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-skype"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-google"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ./Team member -->
-             <!-- Team member -->
-            <div class="col-xs-12 col-sm-4 col-md-4">
-                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                    <div class="mainflip">
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><div alt="card image"> <%= link_to image_tag "yaniris_photo.jpg" , class:" team_photo"  %></div></p>
-                                    <h4 class="card-title">Sunlimetech</h4>
-                                    <p class="card-text">This is basic card with image on top, title, description and button.</p>
-                                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backside">
-                            <div class="card">
-                                <div class="card-body text-center mt-4">
-                                    <h4 class="card-title">Sunlimetech</h4>
-                                    <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
-                                    <ul class="list-inline">
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-skype"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-google"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ./Team member -->
-            <!-- Team member -->
-            <div class="col-xs-12 col-sm-4 col-md-4">
-                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-                    <div class="mainflip">
-                        <div class="frontside">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <p><div alt="card image"> <%= link_to image_tag "angela_photo.jpg" , class:" team_photo"  %></div></p>
-                                    <h4 class="card-title">Sunlimetech</h4>
-                                    <p class="card-text">This is basic card with image on top, title, description and button.</p>
-                                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="backside">
-                            <div class="card">
-                                <div class="card-body text-center mt-4">
-                                    <h4 class="card-title">Sunlimetech</h4>
-                                    <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
-                                    <ul class="list-inline">
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-skype"></i>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                <i class="fa fa-google"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-</section>
 <script src="https://apps.elfsight.com/p/platform.js" data-turbolinks-permanent>
 
 </script>
 
-<div id="sfcy16hzy2wr47eb39shqtmfem2umjzdth5"></div><script type="text/javascript" src="https://counter10.stat.ovh/private/counter.js?c=y16hzy2wr47eb39shqtmfem2umjzdth5&down=async" async></script><br><a href="https://www.freecounterstat.com">free web counters</a><noscript><a href="https://www.freecounterstat.com" title="free web counters"><img src="https://counter10.stat.ovh/private/freecounterstat.php?c=y16hzy2wr47eb39shqtmfem2umjzdth5" border="0" title="free web counters" alt="free web counters"></a></noscript>
 
 
 
