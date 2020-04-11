@@ -103,6 +103,12 @@ ytp-chrome-top, ytp-show-cards-title{
     }
 }
 
+.testimonial-thumb{
+    width:80%;
+    margin-left:-5px;
+    border-radius:50px;
+  }
+
 
 $size: 50px;
 
@@ -113,34 +119,6 @@ $size: 50px;
     width: $size;
   }
   
-  .ssb-twitter{
-      display:none;
-  }
-  .ssb-douban{
-      display:none;
-  }
-  .ssb-reddit{
-       display:none;
-  }
-  .ssb-weibo{
-       display:none;
-  }
-  .ssb-qq{
-       display:none;
-  }
-  .ssb-wechat{
-       display:none;
-  }
-  .ssb-xing{
-      display:none;
-  }
-  .ssb-odnoklassniki{
-      display:none;
-  }
-  .ssb-vkontakte{
-      display:none;
-  }
-  .ssb-delicious{
-      display:none;
-  }
+  
+  
 }
