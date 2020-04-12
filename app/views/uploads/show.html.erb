@@ -1,13 +1,14 @@
-<h1>Playing Audio</h1>
+<h1>Orientacion Familiar Podcasts</h1>
 <html>
 <head>
+	<p>	<%= @upload.title %></p>
 	<title>Audio Player</title>
 </head>
 <body>
 </body>
 </html>
 <audio controls="controls">
-	<source src="#{@upload.url}" type="audio/mpeg">
+	<source src= '<%= @upload.url %>' type="audio/mpeg">
 	<source src="music.ogg" type="audio/ogg">
 </audio>
 </html>

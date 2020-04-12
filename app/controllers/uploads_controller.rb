@@ -1,5 +1,7 @@
 class UploadsController < ApplicationController
   require 'aws-sdk'
+  
+
       
   def new
   end
@@ -16,12 +18,14 @@ class UploadsController < ApplicationController
   obj = s3.bucket(bucket).object(name)
   
   # Upload it      
-  obj.upload_file(params[:file].path)
+  obj.upload_file(params[:file].path )
   
   # Create an object for the upload
     @upload = Upload.new(
     		url: obj.public_url,
-		    name: obj.key
+		    name: obj.key,
+		    title: params[:title],
+		    description: params[:description]
     	)
 
 
@@ -41,4 +45,5 @@ class UploadsController < ApplicationController
   def show
     @upload = Upload.find(params[:id])
   end
+  
 end
