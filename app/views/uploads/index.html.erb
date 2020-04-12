@@ -1,0 +1,8 @@
+<h1>Escucha Nestros Postcasts de Orientacion Familiar</h1>
+<% @uploads.each do |upload| %>
+	<div>
+		<%= link_to upload.title ,  upload.url  %>
+	</div>
+<% end %>
+</br>
+<%= link_to 'Nueva Grabacion o Postcast',  new_upload_path %>

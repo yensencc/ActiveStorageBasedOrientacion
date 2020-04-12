@@ -1,0 +1,14 @@
+<h1>Uploads#new</h1>
+<p>Find me in app/views/uploads/new.html.erb</p>
+<%= form_tag uploads_path , enctype: 'multipart/form-data' do %>
+	<%= file_field_tag :file  %>
+	<%= submit_tag 'Upload file' %>
+	<%=  field_set_tag :title %>
+	<%= text_field_tag :title  %>
+	<%=  field_set_tag :description %>
+	<%= text_field_tag :description  %>
+<% end %>
+
+</br>
+<%= link_to "All Files", uploads_index_path %>
+

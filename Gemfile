@@ -12,7 +12,7 @@ gem 'bootstrap', '~> 4.0.0'
 # adding simple-form
 # adding social-share button
 gem 'rails-social-share-button'
-
+gem 'aws-sdk'
 gem 'simple_form'
 # adding jquery
 gem 'jquery-rails'

@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   
+  get 'uploads/new'
+  get 'uploads/create'
+  get 'uploads/index'
+  resources :uploads
   resources :posts do
   resources :comments , only: [:create, :index, :destroy]
+
 end
   resources :posts
   resources :comments
