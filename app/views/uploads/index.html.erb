@@ -1,16 +1,23 @@
 <h1>Selecciona de la lista para reproducir de Orientacion Familiar</h1>
-<% @uploads.each do |upload| %>
-	<div>
-		<%= link_to upload.title ,  upload %>
-	</div>
-<% end %>
-</br>
-<% if current_user && current_user.admin? %>
-<%= link_to 'Nueva Grabacion o Postcast',  new_upload_path %>
-<% end %>
+<div class="container">
+  <div class= "row">
+  <% @uploads.each do |upload| %>
+    <div class="col-sm-3 col-md-3">
+              <%= link_to(image_tag("https://cdn.martinbaileyphotography.com/wp-content/uploads/2019/08/MBP_Podcast_20190718_MR27892.jpg" , style:"border-radius:50px; height:150px; margin-top:20%; position:flex; "), upload)  %>
+	              
+              <%= link_to upload.title ,upload, {:style=>'color:#FFFFFF; display: block;font-weight: 895;'} %>
+         
+              
+    </div>
+     <% end %>
+  </div>
+ 
 
-<div class="container"  >
-        <div class=" col-sm-6 col-md-6" >
-         <%= link_to(image_tag("https://cdn.martinbaileyphotography.com/wp-content/uploads/2019/08/MBP_Podcast_20190718_MR27892.jpg" , style:"width:80%;border-radius:50px; height:150px "), uploads_index_path)  %>
-        </div>
-</div>
+  </div>
+  </br>
+  <% if current_user && current_user.admin? %>
+  <%= link_to 'Nueva Grabacion o Postcast',  new_upload_path %>
+  <% end %>
+
+
+
