@@ -9,29 +9,32 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 <body >
 <div align= "center">
-<nav class="navbar navbar-expand-lg navbar-light bg-light " >
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light"  >
   <a class="navbar-brand" href="#"><%= image_tag "banner_burned.png",  class: "icon" %></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon">
   </span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent" style = "margin-left: 4%";>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" style = "margin-left: 4%;";>
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <div class="nav-link" href="#"><%= link_to 'Inicio', root_path %><span class="sr-only">(current)</span></div>
+        <div class="nav-link" href="#"><%= link_to 'Inicio' , root_path, style:"font-size:1.5em" %><span class="sr-only">(current)</span></div>
       </li>
       <li class="nav-item">
-        <div class="nav-link" href="#"><%= link_to 'Mision', home_mision_path %></div>
+        <div class="nav-link" href="#"><%= link_to 'Mision', home_mision_path, style:"font-size:1.5em"%></div>
       </li>
 
       <li class="nav-item">
-        <div class="nav-link" href="#"><%= link_to 'Contacto', home_contacto_path %></div>
+        <div class="nav-link" href="#"><%= link_to 'Contacto', home_contacto_path, style:"font-size:1.5em" %></div>
       </li>
       <li>
-       <div class="nav-link" href="#"> <%= link_to 'Articulos de Interes', posts_path %></div>
+       <div class="nav-link" href="#"> <%= link_to 'Articulos de Interes', posts_path, style:"font-size:1.5em" %></div>
       </li>
       <li>
-       <div class="nav-link" href="#"> <%= link_to 'Cursos', 'https://www.udemy.com/courses/search/?src=ukw&q=padres' %></div>
+       <div class="nav-link" href="#"> <%= link_to 'Cursos', 'https://www.udemy.com/courses/search/?src=ukw&q=padres', style:"font-size:1.5em" %></div>
+      </li>
+      <li>
+       <div class="nav-link" href="#"> <%= link_to 'Audio Podcats', uploads_index_path, style:"font-size:1.5em" %></div>
       </li>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Radio</a>
@@ -39,17 +42,17 @@
         </div>
       </li>
        <li class="nav-item">
-        <div class="nav-link " href="#"><%= link_to 'Quienes Somos', home_somos_path %></div>
+        <div class="nav-link " href="#"><%= link_to 'Quienes Somos', home_somos_path, style:"font-size:1.5em" %></div>
       </li>
       </li>
        <li class="nav-item">
-        <div class="nav-link " href="#"><%= link_to 'TV y Radio', home_radio_path %></div>
+        <div class="nav-link " href="#"><%= link_to 'TV y Radio', home_radio_path, style:"font-size:1.5em" %></div>
       </li>
       
       <li class="nav-item ">
          <% if user_signed_in? %>
-         <div class="nav-link " href="#"><%= link_to 'Edit profile', edit_user_registration_path %></div>
-        <li class="nav-item "> <div class="nav-link " href="#"><%= link_to "Logout", destroy_user_session_path, method: :delete %></div></li>
+         <div class="nav-link " href="#"><%= link_to 'Edit profile', edit_user_registration_path, style:"font-size:1.5em" %></div>
+        <li class="nav-item "> <div class="nav-link " href="#"><%= link_to "Logout", destroy_user_session_path, method: :delete, style:"font-size:1.5em"%></div></li>
         <% if current_user.avatar.attached? %>
         <li class="nav-item "> <%= image_tag('https://clipartart.com/images/login-background-images-clipart-1.jpg' , :style => 'border-right: 1px solid #000  ; width:60px; height:50px;  border-radius: 30px 30px;' ) %></li>
         <% else %>
@@ -57,10 +60,10 @@
         <% end %>
         <liclass="nav-item "> Logged in as <strong><%= current_user.email %></strong>.</li>
          <% else %>
-        <div class="nav-link " href="#"><%= link_to "Sign up", new_user_registration_path %> 
+        <div class="nav-link " href="#"><%= link_to "Sign up", new_user_registration_path, style:"font-size:1.5em" %> 
       </li>
       <li class="nav-item">
-         <div class="nav-link " href="#"><%= link_to "Login", new_user_session_path  %></div>
+         <div class="nav-link " href="#"><%= link_to "Login", new_user_session_path, style:"font-size:1.5em"  %></div>
         <% end %>
       </li> 
     </ul>
@@ -80,22 +83,22 @@
     <%= yield %>
 </div>
 <!-- Footer -->
-  <section id="footer" style = "margin-top:20%">
+  <section id="footer" style = "margin-top:20%;">
     <div class="container">
-      <div class="row text-center text-xs-center text-sm-left text-md-left">
+      <div class="row text-center text-xs-center text-sm-left text-md-left" >
         <div class="col-xs-12 col-sm-4 col-md-4">
           <h5>Quick links</h5>
-          <ul class="list-unstyled quick-links">
-            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
-            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
-            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+          <ul class=" quick-links" style= "color:white;">
+            <li ><a href="javascript:void();"><i class="fa fa-angle-double-right"></i><%= link_to 'Inicio' , root_path, style:"font-size:1.5em" %></a></li>
+            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i><%= link_to 'Mision', home_mision_path, style:"font-size:1.5em"%></a></li>
+            <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i><%= link_to 'TV y Radio', home_radio_path, style:"font-size:1.5em" %></a></li>
             <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
             <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Videos</a></li>
           </ul>
         </div>
         <div class="col-xs-12 col-sm-4 col-md-4">
           <h5>Quick links</h5>
-          <ul class="list-unstyled quick-links">
+          <ul class="quick-links" style= "color:white;">
             <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
             <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
             <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
@@ -129,8 +132,8 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
           <p><u><a href="https://www.nationaltransaction.com/">Orientacion Familiar es una 
-          institucion registrada bajo la direccion de Dr. Jose Gil y incorporatda en Hazleton PA. </p>
-          <p class="h6">&copy All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">Orientacion Familiar</a></p>
+          institucion registrada bajo la direccion general del Dr. Jose Gil Abreu e incorporada en Hazleton Pensylvannia Estados Unidos. </p>
+          <p class="h6">&copy All rights Reserved.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">Orientacion Familiar Una Guia Para El Hogar</a></p>
         </div>
         </hr>
       </div>  
