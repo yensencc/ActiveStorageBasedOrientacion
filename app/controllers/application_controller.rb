@@ -1,4 +1,10 @@
 class ApplicationController < ActionController::Base
+
+
+
+def original_url
+  original_fullpath
+end
     
 protected
 
@@ -10,5 +16,8 @@ protected
      u.permit(:avatar, :email, :password, :password_confirmation,
      :current_password)
      } 
+
+
+
 end
 end

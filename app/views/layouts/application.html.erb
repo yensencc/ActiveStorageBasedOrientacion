@@ -112,7 +112,7 @@
     <%= yield %>
 </div>
 </body>
-
+<%= render_shareable %>
 <div class="container col-xs-12 col-sm-12 col-md-12" style= "background:rgb(34,102, 102); color:white">
 <!-- Footer -->
   <section class= "footer" id="footer" style= "background:rgb(34,102, 102);padding-top: 25%;" >
@@ -167,7 +167,8 @@
 
 <script>
 setTimeout(function(){
-youtube_frame.children[1].childNodes[3].childNodes[3].style.zIndex = 0;
+
+youtube_frame.children[2].childNodes[3].childNodes[3].style.zIndex = 0;
+youtube_frame.children[2].childNodes[2].childNodes[3].style.zIndex = 0;
 }, 5000);
 </script>
-

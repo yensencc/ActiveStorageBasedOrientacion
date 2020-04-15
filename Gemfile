@@ -11,6 +11,7 @@ gem 'puma', '~> 3.11'
 # adding simple-form
 # adding social-share button
 gem 'rails-social-share-button'
+gem 'shareable'
 gem 'aws-sdk'
 gem 'simple_form'
 # adding jquery
