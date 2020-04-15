@@ -8,8 +8,12 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 <body >
-<div align= "center">
-<nav class="navbar navbar-expand-lg navbar-light bg-light " >
+<div align= "center" >
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" >
 
   <a class="navbar-brand" href="#"><%= image_tag "banner_burned.png",  class: "icon" %></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,7 +23,7 @@
   </button>
 
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" >
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <div class="nav-link" href="#"><%= link_to 'Inicio', home_index_path, style:"font-size:1.4em" %><span class="sr-only">(current)</span></div>
@@ -98,7 +102,7 @@
   </head>
 
   <body>
-<div align= "center" style= "background:rgb(34, 102, 102) none repeat scroll 0% 0%; color:white;">
+<div align= "center" style= "background:rgb(34, 102, 102)">
     <% if notice %>
       <p class="alert alert-success"><%= notice %></p>
     <% end %>
@@ -107,11 +111,13 @@
     <% end %>
     <%= yield %>
 </div>
-<div class="container">
+</body>
+
+<div class="container col-xs-12 col-sm-12 col-md-12" style= "background:rgb(34,102, 102); color:white">
 <!-- Footer -->
-  <section class= "col-xs-12 col-sm-12 col-md-12" id="footer" style = "margin-top:20%;">
-    <div class="container">
-      <div class="row text-center text-xs-center text-sm-left text-md-left" >
+  <section class= "" id="footer" style= "background:rgb(34,102, 102)" >
+    <div class="container ">
+      <div class="row text-center text-xs-center text-sm-left text-md-left "  style= "background:rgb(34,102, 102)">
         <div class="col-xs-4 col-sm-4 col-md-4  ">
           <h5>Visitanos en Youtube</h5>
           <ul class=" quick-links">
@@ -144,7 +150,7 @@
         </div>
     </div>
       <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center" >
           <p><u><a class="text-footer" href="https://www.nationaltransaction.com/">Orientacion Familiar es una 
           institucion registrada bajo la direccion general del Dr. Jose Gil Abreu e incorporada en Hazleton Pensylvannia Estados Unidos. </p>
           <p class="h6">&copy All rights Reserved.<a class="text-green ml-2 text-footer" href="https://www.sunlimetech.com" target="_blank">Orientacion Familiar Una Guia Para El Hogar</a></p>
@@ -158,14 +164,10 @@
 </html>
 
 
-<aside class= 'lx-4 xl-3 c-static-advert-rigth-area'>
-
-</aside>
-
 
 <script>
 setTimeout(function(){
-youtube_frame.children[1].childNodes[2].childNodes[3].style.zIndex = 0;
+youtube_frame.children[1].childNodes[3].childNodes[3].style.zIndex = 0;
 }, 5000);
 </script>
 
