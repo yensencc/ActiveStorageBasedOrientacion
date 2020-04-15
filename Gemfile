@@ -15,8 +15,7 @@ gem 'aws-sdk'
 gem 'simple_form'
 # adding jquery
 gem 'jquery-rails'
-gem 'bootstrap',     '4.1.1'
-gem 'material-sass', '4.1.1'
+gem 'bootstrap',     '~> 4.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
