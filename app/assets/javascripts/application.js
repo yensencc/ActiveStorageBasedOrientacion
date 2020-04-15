@@ -15,6 +15,7 @@
 //= require_tree 
 //= require jquery3
 //= require bootstrap
+//= require material
 //= require rails-social-share-button
 
 

@@ -8,7 +8,6 @@ gem 'rails', '~> 5.2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # adding bootstrap
-gem 'bootstrap', '~> 4.0.0'
 # adding simple-form
 # adding social-share button
 gem 'rails-social-share-button'
@@ -16,6 +15,8 @@ gem 'aws-sdk'
 gem 'simple_form'
 # adding jquery
 gem 'jquery-rails'
+gem 'bootstrap',     '4.1.1'
+gem 'material-sass', '4.1.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
