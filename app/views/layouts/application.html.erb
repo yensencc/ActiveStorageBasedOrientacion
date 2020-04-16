@@ -65,7 +65,7 @@
         <div class="dropdown">
 
     <% if user_signed_in? %>
-        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown"aria-expanded="false" style = "font-size:1.2em;margin-left:-15px">Bienvenido ! <%= current_user.email %> <b class="caret"></b>
+        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" data-toggle="dropdown"aria-expanded="false" style = "font-size:1.2em;margin-left:-15px">Bienvenido ! <%= current_user.email.split(/@/).first  %> <b class="caret"></b>
         </a>
         <div class="dropdown-menu  dropdown-menu-right" aria-labelledby="navbarDropdown">
         <!-- ADDED CLASS -->

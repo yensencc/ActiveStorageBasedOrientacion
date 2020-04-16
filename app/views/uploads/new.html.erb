@@ -1,14 +1,14 @@
-<h1>Podcasts</h1>
-<p>Grabaciones</p>
+<h1 style= "color:white">Podcasts</h1>
+<p style = "color:white">Grabaciones</p>
 <%= form_tag uploads_path , enctype: 'multipart/form-data' do %>
-	<%= file_field_tag :file  %>
+	<%= file_field_tag :file , style:"color:white" %>
 	<%= submit_tag 'Upload file' %>
-	<%=  field_set_tag :title %>
+	<%=  field_set_tag :Title, style:"color:white" %>
 	<%= text_field_tag :title  %>
-	<%=  field_set_tag :description %>
+	<%=  field_set_tag :Description , style:"color:white" %>
 	<%= text_field_tag :description  %>
 <% end %>
 
 </br>
-<%= link_to "Ir a todas las grabaciones y podcats", uploads_index_path %>
+<%= link_to "Ir a todas las grabaciones y podcats", uploads_index_path , style:"color:white"%>
 
