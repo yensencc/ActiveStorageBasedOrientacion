@@ -42,7 +42,7 @@ class UploadsController < ApplicationController
       
 
       else
-            flash.alert = "Usted debe tener permisos de administrador para esta accion !.
+            flash.alert = "Usted debe tener permisos de administrador para esta accion !."
 
       end
   end
