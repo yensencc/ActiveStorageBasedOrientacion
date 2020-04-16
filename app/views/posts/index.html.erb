@@ -3,7 +3,7 @@
 <h1 style= "color:white"> Articulos de Orientacion Familiar</h1>
     <div class= "d-flex justify-content-center">
     <div class=  "social-share-button">
-    <%= rails_social_share_button_tag(request.original_url + ' Audios de Orientacion Familiar '  , url: request.original_url, desc: "Orientacion Familiar Una Guia Para El Hogar; TV, Radio, Reflexiones, Dr Jose Gil Abreu") %>
+    <%= rails_social_share_button_tag(request.original_url + ' Audios de Orientacion Familiar '  , url: request.original_url, desc: " Lee nuestros Articulos y blogs Orientacion Familiar Una Guia Para El Hogar; TV, Radio, Reflexiones, Dr Jose Gil Abreu") %>
 </div>
     </div>
 <br>
@@ -32,7 +32,7 @@
     <% end %>
     </div>
     <div class = "col sm-12">
-        <%= link_to 'Postear nuevo Art  ', new_post_path %> | | <%= link_to 'Volver a inicio', root_path %> 
+        <h3 style = "color:white"><%= link_to 'Postear nuevo Articulo  ', new_post_path, style:"color:white" %>  ||  <%= link_to 'Volver a inicio', root_path, style:"color:white" %> </h3>
     </div>
 
 
@@ -40,9 +40,7 @@
 </div>
 
 
-    <div style= "justify-content: center">
-  
-   </div>
+   
 
 
 
