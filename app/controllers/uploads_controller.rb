@@ -42,7 +42,7 @@ class UploadsController < ApplicationController
       
 
       else
-            flash.alert = "You must have Admin rigths to upload a new Audio"
+            flash.alert = "Usted debe tener permisos de administrador para esta accion !.
 
       end
   end

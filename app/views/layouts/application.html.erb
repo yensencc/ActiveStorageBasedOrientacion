@@ -14,7 +14,7 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!------ Include the above in your HEAD tag ---------->
 </div>
-<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style= "font-size: 18px;">
 
   <a class="navbar-brand" href="#"><%= image_tag "banner_burned.png",  class: "icon" %></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,10 +71,13 @@
         <!-- ADDED CLASS -->
         <a class="dropdown-item" > <%= link_to "Logout", destroy_user_session_path, method: :delete , style:"font-size:1.2em" %></a>
         <a class="dropdown-item" href="#"><%= link_to 'Edit profile', edit_user_registration_path , style:"font-size:1.2em"%></a>
+        <% if current_user.admin %>
+        <a class="dropdown-item" href="#"><%= link_to 'Subir Audio Podcast', uploads_new_path , style:"font-size:1.2em"%></a>
+        <% end %>
       </div>
        
     <%else %>
-        <a class="nav-link"> <%= link_to 'Sing In' , new_user_session_path, style:"font-size:1.2em" %> <b class="caret"></b>
+        <a class="nav-link"> <%= link_to 'Iniciar Seccion' , new_user_session_path, style:"font-size:1.2em" %> <b class="caret"></b>
         </a>
           <b class="caret"></b>
     <%end %>
