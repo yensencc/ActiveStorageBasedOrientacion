@@ -1,6 +1,6 @@
 
 <div class=  "social-share-button">
-    <%= rails_social_share_button_tag('Share to social media', url: request.original_url, desc: "Orientacion Familiar Una Guia Para El Hogar; TV, Radio, Reflexiones, Dr Jose Gil Abreu") %>
+    <%= rails_social_share_button_tag( request.original_url  + '  ' + @post.main_title , url: request.original_url , desc: "Orientacion Familiar Una Guia Para El Hogar; TV, Radio, Reflexiones, Dr Jose Gil Abreu") %>
 </div>
 <img src="<%= @post.main_image_post_url %>" class="img-fluid" alt="Responsive image">
 <div class= 'h1'>
