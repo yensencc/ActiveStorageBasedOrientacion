@@ -1,42 +1,45 @@
 
 <div class=  "social-share-button">
+  <h2 style= "color:white"> Comparte nuestro contenido en todas redes sociales ! </h2>
+  <a href=""><%= image_tag("https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_instagram-512.png", class:" share-button ssb-icon") %></a>
+<a href=""><%= image_tag("http://aux2.iconspalace.com/uploads/sharethis-icon-256-1927422772.png", class:" share-button ssb-icon") %></a>
     <%= rails_social_share_button_tag( request.original_url  + '  ' + @post.main_title , url: request.original_url , desc:  @post.main_title + ' Orientacion Familiar Una Guia Para El Hogar; TV, Radio, Reflexiones, Dr Jose Gil Abreu') %>
+
 </div>
-<a href=""><%= image_tag("https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_instagram-512.png", class:" share-button ssb-icon") %></a>
 
 <body>
 <img src="<%= @post.main_image_post_url %>" class="img-fluid" alt="Responsive image">
 <div class= 'h1'>
-  <%= @post.main_title %>
+  <%= @post.main_title  %>
 </div></br>
- <p><%= @post.created_at.strftime("%B %d, %Y") %></p> 
+ <p><%= @post.created_at.strftime("%B %d, %Y")  %></p> 
 
 
 
 </br>
 
 <p>
-  <%= @post.main_content %>
+  <%= @post.main_content  %>
 </p>
 
 <div class = "img-thumbnail" alt="">
-  <%= @post.sub1_image_url %>
+  <%= @post.sub1_image_url   %>
 </div >
   
 </p>
 
 <p>
 
-  <%= @post.subtitle_1 %>
+  <%= @post.subtitle_1   %>
 </p>
 
 <p>
 
-  <%= @post.content_1 %>
+  <%= @post.content_1  %>
 </p>
 
 <div class = "img-thumbnail" alt="">
-  <%= @post.sub2_image_url %>
+  <%= @post.sub2_image_url  %>
 </div >
 
 <p>
@@ -185,7 +188,7 @@
   shareButton.addEventListener('click', event => {
     if (navigator.share) { 
      navigator.share({
-        title: 'Orientacion Familiar una Guia para el Hogar TV ' + @post.main_title,
+        title: 'Orientacion Familiar una Guia para el Hogar TV ' + ' <%= @post.main_title %>' ,
         url: '<%= request.original_url %>' 
       }).then(() => {
         console.log('Thanks for sharing!');

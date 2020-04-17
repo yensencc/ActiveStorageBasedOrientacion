@@ -1,7 +1,10 @@
 <div class= "d-flex justify-content-center">
 <div class=  "social-share-button">
+  <h2 style= "color:white"> Comparte nuestro contenido en todas las redes sociales  </h2>
+    <h3 style= "color:white"> con solo un click ! </h3>
+  <a href=""><%= image_tag("http://aux2.iconspalace.com/uploads/sharethis-icon-256-1927422772.png", class:" share-button ssb-icon") %></a>
+        <a href=""><%= image_tag("https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_instagram-512.png", class:" share-button ssb-icon") %></a>
     <%= rails_social_share_button_tag(request.original_url + "  " + @upload.title , url: request.original_url + "  " + @upload.title, desc: @upload.title + " Orientacion Familiar Una Guia Para El Hogar; TV, Radio, Reflexiones, Dr Jose Gil Abreu") %>
-     <a href=""><%= image_tag("https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_instagram-512.png", class:" share-button ssb-icon") %></a>
 </div>
 </div>
 </div>
@@ -20,7 +23,7 @@
   shareButton.addEventListener('click', event => {
     if (navigator.share) { 
      navigator.share({
-        title: 'Orientacion Familiar una Guia para el Hogar TV ' + @upload.title ,
+        title: 'Orientacion Familiar una Guia para el Hogar TV ' +  '<%=  @upload.title %>',
         url: '<%= request.original_url %>' 
       }).then(() => {
         console.log('Thanks for sharing!');
