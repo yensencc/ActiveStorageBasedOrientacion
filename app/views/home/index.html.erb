@@ -195,8 +195,8 @@
   shareButton.addEventListener('click', event => {
     if (navigator.share) { 
      navigator.share({
-        title: 'https://codepen.io/ayoisaiah/pen/YbNazJ' ,
-        url: 'https://codepen.io/ayoisaiah/pen/YbNazJ'
+        title: 'Home page Orienetacion Familiar Una Guia Para El Hogar' ,
+        url: "<%= request.original_url %>";
       }).then(() => {
         console.log('Thanks for sharing!');
       })
