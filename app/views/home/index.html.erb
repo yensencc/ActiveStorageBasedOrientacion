@@ -3,7 +3,12 @@
     <%= rails_social_share_button_tag(request.original_url + "  Orientacion Familiar una guia para el hogar / Home page", url: request.original_url, desc: "Orientacion Familiar Una Guia Para El Hogar; TV, Radio, Reflexiones, Dr Jose Gil Abreu Home page") %>
 
 
-      <a href="#" class= "share-button"><%= image_tag("http://aux2.iconspalace.com/uploads/sharethis-icon-256-1927422772.png", class:" share-button ssb-icon  translation-missing", ) %></a>
+  <button class="share-button  ssb-icon" type="button" title=" ">
+    <svg>
+      <use ><%= image_tag("http://aux2.iconspalace.com/uploads/sharethis-icon-256-1927422772.png") %></use>
+    </svg>
+    <span>Share</span>
+  </button>
       
    
 
@@ -182,22 +187,17 @@
 </div> 
 
 
-<script src="https://apps.elfsight.com/p/platform.js" data-turbolinks-permanent>
-
-</script>
-
 
 <script>
 
-  url = new Object();
 
   const shareButton = document.querySelector('.share-button');
 
   shareButton.addEventListener('click', event => {
     if (navigator.share) { 
      navigator.share({
-        title: 'Home page Orienetacion Familiar Una Guia Para El Hogar' ,
-        url =  "<%= request.original_url %>";
+        title: 'Orientacion Familiar una Guia para el Hogar',
+        url: '<%= request.original_url %>'
       }).then(() => {
         console.log('Thanks for sharing!');
       })
