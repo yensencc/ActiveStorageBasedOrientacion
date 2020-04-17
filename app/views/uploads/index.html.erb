@@ -31,7 +31,7 @@
     if (navigator.share) { 
      navigator.share({
         title: 'Audio Podcats de Orientacion Familiar una Guia Para el Hogar',
-        url: request.original_url
+        url: <%= request.original_url %>
       }).then(() => {
         alert('Thanks for sharing!');
       })

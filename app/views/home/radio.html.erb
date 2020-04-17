@@ -51,7 +51,7 @@ youtube_frame.children[2].childNodes[2].childNodes[3].style.zIndex = 0;
     if (navigator.share) { 
      navigator.share({
         title: 'Orientacion Familiar TV y Radio',
-        url: request.original_url
+        url: <%= request.original_url %>
       }).then(() => {
         alert('Thanks for sharing!');
       })

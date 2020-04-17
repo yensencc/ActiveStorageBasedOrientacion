@@ -21,7 +21,7 @@
     if (navigator.share) { 
      navigator.share({
         title: @upload.title,
-        url: request.original_url
+        url: <%= request.original_url %>
       }).then(() => {
         alert('Thanks for sharing!');
       })
