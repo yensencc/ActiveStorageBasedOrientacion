@@ -1,8 +1,10 @@
 <div class= "d-flex justify-content-center">
 <div class=  "social-share-button">
-    <%= rails_social_share_button_tag(request.original_url + "  Orientacion Familiar una guia para el hogar / Home page", url: request.original_url, desc: "Orientacion Familiar Una Guia Para El Hogar; TV, Radio, Reflexiones, Dr Jose Gil Abreu Home page") %>
 
-<a href=""><%= image_tag("http://aux2.iconspalace.com/uploads/sharethis-icon-256-1927422772.png", class:" share-button ssb-icon") %></a>
+    <%= rails_social_share_button_tag(request.original_url + "  Orientacion Familiar una guia para el hogar / Home page", url: request.original_url, desc: "Orientacion Familiar Una Guia Para El Hogar; TV, Radio, Reflexiones, Dr Jose Gil Abreu Home page") %>
+    <a href=""><%= image_tag("https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_instagram-512.png", class:" share-button ssb-icon") %></a>
+
+
 
 </div>
 </div>
@@ -188,8 +190,8 @@
   shareButton.addEventListener('click', event => {
     if (navigator.share) { 
      navigator.share({
-        title: 'Orientacion Familiar una Guia para el Hogar',
-        url: '<%= request.original_url %>' + ' TV,  Radio, Audios, Terapia Familiar y mas'
+        title: 'Orientacion Familiar una Guia para el Hogar TV, RADIO, AUDIOS , Terapia familiar, individual y mas',
+        url: '<%= request.original_url %>' 
       }).then(() => {
         console.log('Thanks for sharing!');
       })
