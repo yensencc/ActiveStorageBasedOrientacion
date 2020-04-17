@@ -189,6 +189,7 @@
 
 <script>
 
+  url = new Object();
 
   const shareButton = document.querySelector('.share-button');
 
@@ -196,7 +197,7 @@
     if (navigator.share) { 
      navigator.share({
         title: 'Home page Orienetacion Familiar Una Guia Para El Hogar' ,
-        url: "<%= request.original_url %>";
+        url =  "<%= request.original_url %>";
       }).then(() => {
         console.log('Thanks for sharing!');
       })
