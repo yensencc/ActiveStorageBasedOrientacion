@@ -1,11 +1,10 @@
 <div class= "d-flex justify-content-center">
 
 <div class=  "social-share-button mb-5">
-         <h2 style= "color:white"> Comparte nuestro contenido en todas las redes sociales  </h2>
+    <h2 style= "color:white"> Comparte nuestro contenido en todas las redes sociales  </h2>
     <h3 style= "color:white"> con solo un click ! </h3>
-       <a href=""><%= image_tag("http://aux2.iconspalace.com/uploads/sharethis-icon-256-1927422772.png", class:" share-button ssb-icon") %></a>
-        <a href=""><%= image_tag("https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_instagram-512.png", class:" share-button ssb-icon") %></a>
-        <%= rails_social_share_button_tag(request.original_url + "  Orientacion Familiar una guia para el hogar / Home page", url: request.original_url, desc: "Orientacion Familiar Una Guia Para El Hogar; TV, Radio, Reflexiones, Dr Jose Gil Abreu Home page") %>
+  <a href=""><%= image_tag("https://cdn0.iconfinder.com/data/icons/social-network-7/50/5-512.png", class:" share-button ssb-icon") %></a>
+    <%= rails_social_share_button_tag( request.original_url + " " + ' Home index Page Inicio', url: request.original_url, desc: " Escucha nuestros Audios y podcasts de Orientacion Familiar Una Guia Para El Hogar; TV, Radio, Reflexiones, Dr Jose Gil Abreu") %>
 </div>
 </div>
 
