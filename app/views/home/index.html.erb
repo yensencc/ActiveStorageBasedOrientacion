@@ -186,8 +186,6 @@
 
 </script>
 
-<script type="text/javascript">if(typeof wabtn4fg==="undefined"){wabtn4fg=1;h=document.head||document.getElementsByTagName("head")[0],s=document.createElement("script");s.type="text/javascript";s.src="url/to/your/button/whatsapp-button.js";h.appendChild(s);}</script>
-
 
 <script>
   var shareButton = document.querySelector('.share-button');
@@ -198,9 +196,9 @@
     if (navigator.share) { 
      navigator.share({
         title: 'Orientacion Familiar Una Guia Para El Hogar; TV, Radio, Audios ,Reflexiones, Dr Jose Gil Abreu Home page',
-        url: <%= request.original_url %>
+        url: <% request.original_url %>
       }).then(() => {
-        alert('Thanks for sharing!');
+        console.log('Thanks for sharing!');
       })
       .catch(console.error);
       } else {
