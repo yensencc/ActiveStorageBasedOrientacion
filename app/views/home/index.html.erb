@@ -197,10 +197,10 @@
   shareButton.addEventListener('click', event => {
     if (navigator.share) { 
      navigator.share({
-        title: 'WebShare API Demo',
-        url: 'https://codepen.io/ayoisaiah/pen/YbNazJ'
+        title: 'Orientacion Familiar Una Guia Para El Hogar; TV, Radio, Audios ,Reflexiones, Dr Jose Gil Abreu Home page',
+        url: request.original_url
       }).then(() => {
-        console.log('Thanks for sharing!');
+        alert('Thanks for sharing!');
       })
       .catch(console.error);
       } else {

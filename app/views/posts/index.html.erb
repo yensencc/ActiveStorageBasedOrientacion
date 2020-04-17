@@ -4,6 +4,7 @@
     <div class= "d-flex justify-content-center">
     <div class=  "social-share-button">
     <%= rails_social_share_button_tag(request.original_url + ' Audios de Orientacion Familiar '  , url: request.original_url, desc: " Lee nuestros Articulos y blogs Orientacion Familiar Una Guia Para El Hogar; TV, Radio, Reflexiones, Dr Jose Gil Abreu") %>
+    <a href= "" ><%= image_tag("http://aux2.iconspalace.com/uploads/sharethis-icon-256-1927422772.png", class:"ssb-icon share-button translation-missing", ) %></a>
 </div>
     </div>
 <br>
@@ -39,6 +40,31 @@
 
 </div>
 
+
+
+<script>
+  const shareButton = document.querySelector('.share-button');
+  const shareDialog = document.querySelector('.share-dialog');
+  const closeButton = document.querySelector('.close-button');
+
+  shareButton.addEventListener('click', event => {
+    if (navigator.share) { 
+     navigator.share({
+        title: 'Articulos y Blogs de Orientacion Familiar Una Guia Para El Hogar; TV, Radio, Reflexiones, Dr Jose Gil Abreu Home page',
+        url: request.original_url
+      }).then(() => {
+        alert('Thanks for sharing!');
+      })
+      .catch(console.error);
+      } else {
+          shareDialog.classList.add('is-open');
+      }
+  });
+
+  closeButton.addEventListener('click', event => {
+    shareDialog.classList.remove('is-open');
+  });
+</script>
 
    
 
