@@ -2,12 +2,12 @@
     <meta charset= "utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Articulos y posts de Orientacion Familiar</title>
-    <meta property="og:title" content="<%= @post.title %>" />
+    <meta property="og:title" content="<%= @post.main_title %>" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="<%= request.original_url %>" />
     <meta property="og:image" content="<%= @post.main_image_post_url  %>" />
     <meta property="og:description" content="<%= @post.author %>" />
-    <meta property="og:site_name" content="<%= @post.description %>" />
+    <meta property="og:site_name" content="<%= @post.main_title %>" />
   </head>
 <div class=  "social-share-button">
   <h2 style= "color:white"> Comparte nuestro contenido en todas redes sociales ! </h2>
